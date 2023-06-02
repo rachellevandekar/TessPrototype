@@ -3,21 +3,25 @@ package com.example.prototypetess;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
+import android.widget.VideoView;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class EindeActivity extends AppCompatActivity {
-
+    VideoView videoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_einde);
 
-        playAudio();
+        videoView = findViewById(R.id.video);
+        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.vraagtess));
+        videoView.start();
 
-        int timeout = 4000; // make the activity visible for 4 seconds
+        int timeout = 10000;
 
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -29,13 +33,8 @@ public class EindeActivity extends AppCompatActivity {
             }
         }, timeout);
 
-    }
 
 
-    private void playAudio(){
-
-        MediaPlayer stem = MediaPlayer.create(EindeActivity.this, R.raw.verpleegkundigejames);
-        stem.start();
     }
 
     public void QuitApp() {

@@ -51,7 +51,7 @@ public class vragenActivity extends AppCompatActivity {
 
     private void playAudio(){
 
-        MediaPlayer stem = MediaPlayer.create(vragenActivity.this, R.raw.vragenjames);
+        MediaPlayer stem = MediaPlayer.create(vragenActivity.this, R.raw.vragentess);
         stem.start();
     }
 }

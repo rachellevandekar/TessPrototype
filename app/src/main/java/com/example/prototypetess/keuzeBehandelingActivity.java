@@ -38,7 +38,7 @@ playAudio();
         btnI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(keuzeBehandelingActivity.this, StartActivity.class));
+                startActivity(new Intent(keuzeBehandelingActivity.this, startStentActivity.class));
             }
         });
 
@@ -52,14 +52,14 @@ playAudio();
         btnHI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(keuzeBehandelingActivity.this, StartActivity.class));
+                startActivity(new Intent(keuzeBehandelingActivity.this, startAblatieActivity.class));
             }
         });
 
         btnS.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(keuzeBehandelingActivity.this, StartActivity.class));
+                startActivity(new Intent(keuzeBehandelingActivity.this, startStentActivity.class));
             }
         });
 
@@ -68,7 +68,7 @@ playAudio();
 
     private void playAudio(){
 
-        MediaPlayer stem = MediaPlayer.create(keuzeBehandelingActivity.this, R.raw.behandelingjames);
+        MediaPlayer stem = MediaPlayer.create(keuzeBehandelingActivity.this, R.raw.tessgehad);
         stem.start();
     }
 }

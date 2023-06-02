@@ -6,8 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".keuzeBehandelingActivity">
 
-
-
     <TextView
         android:id="@+id/textViewQuestion"
         android:layout_width="wrap_content"
@@ -43,7 +41,7 @@
         android:layout_width="900dp"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
-        android:text="Pacemaker"
+        android:text="Pacemakerimplantatie"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -71,7 +69,7 @@
         android:layout_width="900dp"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
-        android:text="Dotterbehandeling"
+        android:text="Stentplaatsing"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -79,7 +77,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.773" />
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,9 +16,10 @@ import java.io.File;
 import java.util.TimerTask;
 import android.app.ActivityManager;
 import android.content.Context;
+import android.widget.VideoView;
 
 public class MainActivity extends AppCompatActivity {
-
+    VideoView videoView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,17 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+        videoView = findViewById(R.id.video);
+        // MediaController mediaController = new MediaController(this);
+        // mediaController.setAnchorView(videoView);
+        //  videoView.setMediaController(mediaController);
+        videoView.setVideoURI(Uri.parse("android.resource://"+getPackageName()+"/"+R.raw.tessintro));
 
-        playAudio();
 
-        int timeout = 6000; // make the activity visible for 4 seconds
+        // playAudio();
+        videoView.start();
+
+        int timeout = 12000; // make the activity visible for 4 seconds
 
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
@@ -38,22 +46,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void run() {
 
-                Intent intent = new Intent(MainActivity.this, BehandelingActivity.class);
+                Intent intent = new Intent(MainActivity.this, gesprekActivity.class);
                 startActivity(intent);
             }
         }, timeout);
 
 
+
     }
+    // public static final int ADJUST_MUTE = -100;
 
 
 
 
 
-
-    private void playAudio(){
-        MediaPlayer stem = MediaPlayer.create(MainActivity.this, R.raw.introjames);
-        stem.start();
 
 
 /*
@@ -73,5 +79,5 @@ public class MainActivity extends AppCompatActivity {
             ex.printStackTrace();
         }
 */
-    }
+
 }

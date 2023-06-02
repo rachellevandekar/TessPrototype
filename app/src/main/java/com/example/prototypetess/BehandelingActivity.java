@@ -52,7 +52,7 @@ playAudio();
 
     private void playAudio(){
 
-       MediaPlayer stem = MediaPlayer.create(BehandelingActivity.this, R.raw.behandelinggehadjames);
+       MediaPlayer stem = MediaPlayer.create(BehandelingActivity.this, R.raw.tessbehandeling);
        stem.start();
     /*
         try{
